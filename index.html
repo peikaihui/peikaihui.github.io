@@ -44,7 +44,7 @@
 
 <body>
     <div class="root">
-        <div class="title">输入姓名，查看图片</div>
+        <div class="title">输入密钥，查看隐藏内容</div>
         <div class="info">
             <input class="name" type="text"><button class="confirm">确认</button>
         </div>
@@ -62,7 +62,7 @@
     $('.confirm').click(() => {
         const val = $('.name')[0].value
         if (!val) {
-            alert('请输入真实有效的姓名')
+            alert('密钥不能为空！！！')
             return
         }
         if (imageData[md5(val)]) {
