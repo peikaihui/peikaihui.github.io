@@ -10,6 +10,8 @@
 <body>
     <div class="wrap">
         <div class="left">
+            <div class="label">开始时间</div>
+            <div class="time">2024年03月24日 09:00:00</div>
             <div class="label">No Smoking</div>
             <div class="time" id="time">0天00小时00分00秒</div>
         </div>
@@ -35,8 +37,9 @@
         minute = (minute < 10) ? '0' + minute : minute;
         second = (second < 10) ? '0' + second : second;
         time.innerHTML = day + '天' + hour + '小时' + minute + '分' + second + '秒';
+        // 此刻的时间 2024-03-25 09:00:00
     }, 1000);
-    var tipList = ['1.不想时间被重置，就忍住了！！！']
+    var tipList = ['1.不想时间被重置，就忍住了！！！', '2.还没多想抽记录一下（2024-03-25 16:02:00）']
     // 渲染进right，倒叙渲染，随机颜色，最美七色
     var right = document.querySelector('.right');
     for (var i = tipList.length - 1; i >= 0; i--) {
@@ -73,7 +76,7 @@
 
     .left {
         min-width: 150px;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .label {
@@ -81,7 +84,8 @@
     }
 
     .time {
-        color: red
+        color: red;
+        margin-bottom: 16px;
     }
 
     .right {
